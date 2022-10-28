@@ -33,7 +33,7 @@ const Tabata = () => {
         setTimeout(() => {
           setRestdown(restdown - 1);
         }, 1);
-      } else if (countdown == 0 && restdown == 0 && currentRound < totalRound) {
+      } else if (countdown === 0 && restdown === 0 && currentRound < totalRound) {
         setCurrentRound(currentRound + 1);
         setCountdown(totalcountdown);
         setRestdown(totalrestdown);
@@ -89,9 +89,9 @@ const Tabata = () => {
   };
 
   const handleNumberClick = (event) => {
-    if (inputType == 'Round') {
+    if (inputType === 'Round') {
       setRoundValue(Number(event.target.value));
-    } else if (inputType == 'Countdown') {
+    } else if (inputType === 'Countdown') {
       setCountdownValue((countdownValue * 10) + Number(event.target.value));
     } else {
       setRestdownValue((restdownValue * 10) + Number(event.target.value));

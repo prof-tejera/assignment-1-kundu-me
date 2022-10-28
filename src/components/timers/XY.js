@@ -27,7 +27,7 @@ const XY = () => {
           setCountdown(countdown - 1);
         }, 1);
       }
-      if (countdown == 0 && currentRound < totalRound) {
+      if (countdown === 0 && currentRound < totalRound) {
         setCurrentRound(currentRound + 1);
         setCountdown(totalcountdown);
       }
@@ -77,7 +77,7 @@ const XY = () => {
   };
 
   const handleNumberClick = (event) => {
-    if (inputType == 'Round') {
+    if (inputType === 'Round') {
       setRoundValue(Number(event.target.value));
     } else {
       setCountdownValue((countdownValue * 10) + Number(event.target.value));
